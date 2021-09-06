@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "920264475629",
+    "project_id": "youpay-b6f81",
+    "storage_bucket": "youpay-b6f81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920264475629:android:432a84313292a591dfdde4",
+        "android_client_info": {
+          "package_name": "com.rafaelfilgueiras.youpayapp.youpay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920264475629-uutagok1dk2evn94nf0uq3c71lcbqq51.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rafaelfilgueiras.youpayapp.youpay",
+            "certificate_hash": "26e617a4c1e9994227bfab8b7ca31bde9f8e73f0"
+          }
+        },
+        {
+          "client_id": "920264475629-navpddsnfdg1jnlesskonr67qqkijl0t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhmgJLjb2Z3NHv6PaA3pfTf4_kxrHpbF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920264475629-navpddsnfdg1jnlesskonr67qqkijl0t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

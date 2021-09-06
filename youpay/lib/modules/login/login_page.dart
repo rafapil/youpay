@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:youpay/shared/themes/themes.dart';
 import 'package:youpay/shared/widgets/social_login/social_login_button.dart';
 
@@ -64,8 +65,19 @@ class _LoginPageState extends State<LoginPage> {
                       top: 40.0,
                     ),
                     child: SocialLoginButton(
-                      onTap: () {
-                        print('clique ok - google');
+                      onTap: () async {
+                        GoogleSignIn _googleSignIn = GoogleSignIn(
+                          scopes: [
+                            'email',
+                            'https://www.googleapis.com/auth/contacts.readonly',
+                          ],
+                        );
+                        try {
+                          final response = await _googleSignIn.signIn();
+                          print(response);
+                        } catch (error) {
+                          print(error);
+                        }
                       },
                     ),
                   )
