@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
+// import 'package:google_sign_in/google_sign_in.dart';
+import 'package:youpay/modules/login/login_controller.dart';
 import 'package:youpay/shared/themes/themes.dart';
 import 'package:youpay/shared/widgets/social_login/social_login_button.dart';
 
@@ -13,6 +14,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
+    // instance of LoginController
+    final _loginController = LoginController();
     // MediaQuery
     final size = MediaQuery.of(context).size;
     return Scaffold(
@@ -65,19 +68,9 @@ class _LoginPageState extends State<LoginPage> {
                       top: 40.0,
                     ),
                     child: SocialLoginButton(
-                      onTap: () async {
-                        GoogleSignIn _googleSignIn = GoogleSignIn(
-                          scopes: [
-                            'email',
-                            'https://www.googleapis.com/auth/contacts.readonly',
-                          ],
-                        );
-                        try {
-                          final response = await _googleSignIn.signIn();
-                          print(response);
-                        } catch (error) {
-                          print(error);
-                        }
+                      onTap: () {
+                        //
+                        _loginController.googleSignIn(context);
                       },
                     ),
                   )

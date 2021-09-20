@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+// import 'package:youpay/modules/home/home_page.dart';
+// import 'package:youpay/modules/splash/splash_page.dart';
 
-import 'modules/login/login_page.dart';
+// import 'modules/login/login_page.dart';
+import 'modules/modules.dart';
 import 'shared/themes/themes.dart';
 
 class AppWidget extends StatelessWidget {
@@ -12,7 +15,12 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
           // primarySwatch: Colors.blue,
           primaryColor: AppColors.primary),
-      home: LoginPage(),
+      initialRoute: '/spalsh',
+      routes: {
+        '/spalsh': (context) => SplashPage(),
+        '/home': (context) => HomePage(),
+        '/login': (context) => LoginPage(),
+      },
     );
   }
 }
