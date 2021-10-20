@@ -77,7 +77,8 @@ class _HomePageState extends State<HomePage> {
                 )),
             GestureDetector(
               onTap: () {
-                print('clicado');
+                // print('clicado');
+                // Navigator.pushNamed(context, "barcode_scanner");
               },
               child: Container(
                 height: 56,
@@ -87,7 +88,9 @@ class _HomePageState extends State<HomePage> {
                   borderRadius: BorderRadius.circular(5.0),
                 ),
                 child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/barcode_scanner');
+                    },
                     icon: Icon(
                       Icons.add_box_outlined,
                       color: AppColors.background,
